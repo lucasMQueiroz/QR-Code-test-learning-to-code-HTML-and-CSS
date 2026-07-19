@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | QR code component</title>
+
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .container {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+    @media (min-width: 768px) {
+      .container {
+        flex-flow: row wrap;
+        padding: 2rem;
+      }
+    }
+    body {
+      background-color: hsl(212, 45%, 89%);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      width: 320px;
+      height: 499px;
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 20px;
+      border-top: 16px;
+      border-left: 16px;
+      border-right: 16px;
+      border-bottom: 40px;
+    }
+    @font-face {
+      font-family: 'Outfit';
+      src: url(https://fonts.google.com/specimen/Outfit);
+      weights: 400, 700;
+    }
+    img {
+      width: 188px; 
+      height: 188px;
+      float: top;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section aria-label="card" id="box">
+      <img src="images/image-qr-code.png"> 
+    </section>
+  </main>
+
+  
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">lucasMQueiroz</a>.
+  </footer>
+</body>
+</html> 
