@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | QR code component</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
     .attribution { font-size: 0.6875rem; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
     .container {
@@ -35,8 +41,9 @@
     }
     #box {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column;
+      margin-bottom: auto;
+      gap: 20px;
       padding: 1rem;
       width: 320px;
       height: 499px;
@@ -47,15 +54,34 @@
       border-right: 16px;
       border-bottom: 40px;
     }
-    @font-face {
-      font-family: 'Outfit';
-      src: url(https://fonts.google.com/specimen/Outfit);
-      weights: 400, 700;
-    }
+      
     img {
-      width: 188px; 
-      height: 188px;
-      float: top;
+      max-width: 100%; height: auto;
+      border-radius: 10px;
+    }
+    #texts {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border-right: 16px solid transparent;
+      border-left: 16px solid transparent;
+    }
+    div {
+      font-family: 'Outfit';
+      text-align: center;
+      width: 100%;
+      height: auto;
+    }
+    div:first-of-type {
+      font-weight: 700;
+      color: hsl(218, 44%, 22%);
+      font-size: 22px;
+    }
+    div:nth-of-type(2) {
+      font-size: 15px;
+      font-weight: 400;
+      color: hsl(216, 15%, 48%);
+      ;
     }
   </style>
 </head>
@@ -63,6 +89,10 @@
   <main class="container">
     <section aria-label="card" id="box">
       <img src="images/image-qr-code.png"> 
+      <section aria-label="texts" id="texts">
+        <div>Improve your front-end skills by building projects</div>
+        <div> Scan the QR code to visit Frontend Mentor and take your coding skills to another level</div>
+      </section>
     </section>
   </main>
 
